@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: q2aminapp
 spec:
-  replicas: 4
+  replicas: 5
   revisionHistoryLimit: 3
   selector:
     matchLabels:
