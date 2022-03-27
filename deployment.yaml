@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: q2aminapp
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: q2aminapp
+  template:
+    metadata:
+      labels:
+        app: q2aminapp
+    spec:
+      containers:
+      - name: q2aminapp
+        image: n01506010/docker-images:latest
+        ports:
+        - containerPort: 8080
